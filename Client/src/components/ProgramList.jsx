@@ -7,13 +7,7 @@ const ProgramList = ({ onProgramClick }) => {
     const fetchPrograms = async () => {
       try {
         const response = await fetch(
-          "http://localhost:5000/dashboard/programs",
-          {
-            method: "GET",
-            headers: { "Content-Type": "application/json" },
-            body: {},
-            credentials: "include",
-          }
+          "http://localhost:5000/dashboard/programs"
         ); // Replace with your API endpoint
         if (!response.ok) {
           throw new Error("Failed to fetch programs");
